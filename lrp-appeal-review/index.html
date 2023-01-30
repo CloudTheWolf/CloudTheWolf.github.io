@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Ban Appeal Review Generator</title>
+	<link rel="stylesheet" href="index.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+<header>	
+	<br />
+	Ban Appeal Review Generator<br />	
+
+	<div class="popup" id="copyReport">
+		<div class="btn" title="Copy the generated post to your clipboard">Copy The Report</div> <span class="popuptext" id="myPopup">Post copied!</span>
+	</div>
+</header>
+
+<body>
+    
+    <div id="form">
+        
+		<div class="form-group">
+			<label>Appeal Details:</label>
+			Username: <input type="text" id="username" name="username" placeholder="JonDoe"><br />
+			Banned By: <input type="text" id="banby" name="banby" placeholder="[M-146] CloudTheWolf"><br />
+			Ban Reason: <input type="text" id="banreason" name="banreason" placeholder="1.1, 2.2, 3.3..."><br />
+			Banned On: <input type="date" id="banon" name="banon" placeholder="13/12/20"><br />
+			Ban Notes:<br />
+			<textarea id="bannotes" name="bannotes" placeholder="Banned for xyz, Clip can be seen on Panel"></textarea>
+		</div>
+		<div class="form-group">
+			<label style="text-align: left;">Panel History:</label>
+			<textarea id="panelhistory" name="panelhistory" placeholder="1.2 - Jan 1st 2022 - Cloud" rows="10"></textarea>
+			
+		</div>
+		<div class="form-group">
+			<label style="text-align: left;">Why I should be unbanned:</label>
+			<textarea id="why" name="why" placeholder="Because..." rows="10"></textarea>
+			
+		</div>
+		<div class="form-group">
+			<label style="text-align: left;">What would you be able to give back to the server if you were unbanned:</label>
+			<textarea id="what" name="what" placeholder="Something like this..." rows="10"></textarea>
+			
+		</div>
+		<div class="form-group">
+			<label style="text-align: left;">My Notes</label>
+			<textarea id="mynotes" name="mynotes" placeholder="Something like this..." rows="10"></textarea>
+			
+		</div>
+		<div class="form-group">
+			<label>Links:</label>
+			Appeal: <input type="text" id="appeal" name="appeal" placeholder="https://www.legacy-roleplay.com/index.php?threads/ban-appeal-##########"><br />
+			Panel: <input type="text" id="panel" name="panel" placeholder="https://c3.legacy-roleplay.com/players/licence::xxxxxxxxxxxxxxxxxxx"><br />
+		</div>
+	</div>
+	<textarea class="wide" id="reportBody">The Appeal Template will automatically generate as you fill out the form to the left.&#10;&#10;(Note: the generated templaye will be editable, but once you edit it, you can no longer update it based on the form)&#10;&#10;If you have any questions or concerns, feel free to reach out to CloudTheWolf#0001 on Discord 🐺&#10;&#10;Based on the SASP Incident Report Generator by Sucher!</textarea>
+	<script src="reports.js"></script>
+</body>
+</html>
