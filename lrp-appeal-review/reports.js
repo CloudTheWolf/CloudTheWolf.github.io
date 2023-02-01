@@ -48,7 +48,7 @@ function report() {
 	buffer.push(`__**Panel History**__`);
 	buffer.push(`${panelhistory}`);
 	buffer.push('');
-	buffer.push('__**Why I should be unbanned:**__');
+	buffer.push('__**Why should you be unbanned":**__');
 	buffer.push(`${why}`);
 	buffer.push('');
 	buffer.push('__**What would you be able to give back to the server if you were unbanned?**__');
