@@ -15,15 +15,18 @@ function report() {
 	let banby = document.getElementById('banby').value;
 	let banon = document.getElementById('banon').value;
 	let banreason = document.getElementById('banreason').value;
+	
 	let bannotes = $('textarea#bannotes').val();
 	if(bannotes == "" || bannotes == null) bannotes = "None"
-	
+	bannotes = urlify(bannotes)
+
 	let panelhistory = $('textarea#panelhistory').val();
 	if(panelhistory == "" || panelhistory == null) panelhistory = "None"
+	panelhistory = urlify(panelhistory)
 
-	let why = $('textarea#why').val();
-	let what = $('textarea#what').val();
-	let mynotes = $('textarea#mynotes').val();
+	let why = urlify($('textarea#why').val());
+	let what = urlify($('textarea#what').val());
+	let mynotes = urlify($('textarea#mynotes').val());
 	
 	let appeal = document.getElementById('appeal').value
 	let pannel = document.getElementById('panel').value
@@ -68,6 +71,12 @@ function report() {
 
 	return document.getElementById('reportBody').innerHTML = buffer.join("\n");
 }
+
+function urlify(text) {
+	
+	var urlRegex = /((http|https):\/\/[^\s]+)/gm;
+	return text.replace(urlRegex, '<$1>')
+  }
 
 let inputs = document.querySelectorAll('input[type="text"], input[type="text2"], input[type="number"], textarea');
 inputs.forEach(i => i.addEventListener('keyup', report, false));
